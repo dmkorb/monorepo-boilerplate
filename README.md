@@ -4,14 +4,6 @@ This is an official starter Turborepo with multiple meta-frameworks all working 
 
 This example also shows how to use [Workspace Configurations](https://turbo.build/repo/docs/core-concepts/monorepos/configuring-workspaces).
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e kitchen-sink
-```
-
 ## What's inside?
 
 This Turborepo includes the following packages and apps:
