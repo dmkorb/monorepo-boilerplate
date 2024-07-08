@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-fastify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node index.js",
+    "dev": "node --import=tsx/esm --watch src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@sinclair/typebox": "^0.32.34",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@fastify/env": "^4.4.0",
+    "@fastify/mongodb": "^8.0.0",
+    "@fastify/type-provider-typebox": "^4.0.0",
+    "env-schema": "^6.0.0",
+    "exit-hook": "^4.0.0",
+    "fastify-plugin": "^4.5.1",
+    "pino": "^9.2.0",
+    "pino-pretty": "^11.2.1"
+  },
+  "imports": {
+    "#src/*": {
+      "types": "./src/*/index.ts",
+      "production": "./dist/*/index.js",
+      "default": "./src/*/index.ts"
+    }
+  }
+}
