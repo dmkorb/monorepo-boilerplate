@@ -8,16 +8,11 @@ export const logger = pino.default({
     },
   }),
   base: null,
-  redact: [
-    '*.headers.authorization',
-  ],
+  redact: ['*.headers.authorization'],
   level: Env.LOG_LEVEL,
 });
 
-export const createLogger = (
-  name: string,
-  bindings?: pino.pino.Bindings
-) => {
+export const createLogger = (name: string, bindings?: pino.pino.Bindings) => {
   return logger.child(
     {
       name,
